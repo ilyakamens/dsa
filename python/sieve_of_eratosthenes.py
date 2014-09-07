@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
 __author__ = 'ilyakamens'
 __date__ = '9/6/14'
-
 
 def get_sieve(n):
     """Uses Eratosthenes's algorithm to determine whether each number
@@ -17,6 +17,7 @@ def get_sieve(n):
     for i in xrange(2, n + 1):
         nums.append(True)
 
+    # for i = 2 ... √n
     for i in xrange(2, int(n**.5)):
         if nums[i]:
             # for j = i^2, i^2 + i, i^2 + 2i, i^2 + 3i...
