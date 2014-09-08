@@ -1,9 +1,8 @@
-import sieve_of_eratosthenes
-
 # -*- coding: utf-8 -*-
 __author__ = 'ilyakamens'
 __date__ = '9/7/14'
 
+from primes import sieve_of_eratosthenes
 
 def prime_facts_trial_division(n):
     """Return a map of prime factors to the number of times each one appears.
@@ -15,7 +14,7 @@ def prime_facts_trial_division(n):
     if n < 1:
         return None
     if n == 1:
-        return {1:1}
+        return {1: 1}
 
     primes = sieve_of_eratosthenes.get_primes(int(n**0.5) + 1)
     prime_factors = {}
@@ -35,5 +34,3 @@ def prime_facts_trial_division(n):
         prime_factors[n] = 1
 
     return prime_factors
-
-print prime_facts_trial_division(858463535)
