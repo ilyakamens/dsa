@@ -5,6 +5,7 @@ __date__ = '9/8/14'
 import unittest
 from primes.prime_factorization import *
 
+
 class PrimeFactorizationTestCase(unittest.TestCase):
     """Tests for prime factorization"""
 
