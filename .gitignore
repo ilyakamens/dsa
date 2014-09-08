@@ -1,0 +1,5 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore forever-changing IntelliJ files
+workspace.xml
