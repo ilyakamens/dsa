@@ -9,7 +9,10 @@ def get_sieve(n):
 
     :param n:   The max number to determine if it's prime
     :return:    None if n < 2, otherwise an array of booleans, where each
-                boolean represents whether the number is prime
+                boolean represents whether the number (index) is prime.
+                e.g.:
+                   0      1      2     3     4      5     6      7     8      9      10
+                [False, False, True, True, False, True, False, True, False, False, False]
     """
     if n < 2:
         return None
@@ -29,6 +32,11 @@ def get_sieve(n):
 
 
 def get_primes(n):
+    """Return the list of primes up to and including n.
+    :param n:   The highest number that could be in the list.
+    :return:    The empty list if n < 2, otherwise a list of primes up to n
+                e.g. [2, 3, 5, 7, etc.]
+    """
     primes = []
 
     sieve = get_sieve(n)
@@ -37,12 +45,3 @@ def get_primes(n):
             primes.append(i)
 
     return primes
-
-
-print get_sieve(1)
-print get_sieve(2)
-print get_sieve(100)
-
-print get_primes(1)
-print get_primes(2)
-print get_primes(100)
