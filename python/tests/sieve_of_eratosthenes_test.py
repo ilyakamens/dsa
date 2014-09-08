@@ -6,7 +6,7 @@ import unittest
 from primes.sieve_of_eratosthenes import *
 
 
-class MyTestCase(unittest.TestCase):
+class SieveOfEratosthenesTestCase(unittest.TestCase):
     """Test cases for getting primes using the Sieve of Eratosthenes"""
 
     def test_get_sieve(self):
