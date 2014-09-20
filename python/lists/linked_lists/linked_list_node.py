@@ -4,7 +4,7 @@ __date__ = '9/16/14'
 
 
 class LinkedListNode(object):
-    """A simple linked list node class with a value
+    """A linked list node class with a value
     and a reference to the next node in the list.
     """
 
