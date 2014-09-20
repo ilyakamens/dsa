@@ -18,8 +18,7 @@ def get_sieve(n):
         return None
 
     nums = [False, False]   # We know 0 and 1 aren't prime
-    for i in xrange(2, n + 1):
-        nums.append(True)
+    nums += [True] * (n - 1)    # Assume the rest are true
 
     # for i = 2 ... √n
     for i in xrange(2, int(n**0.5) + 1):
@@ -37,11 +36,5 @@ def get_primes(n):
     :return:    The empty list if n < 2, otherwise a list of primes up to n
                 e.g. [2, 3, 5, 7, etc.]
     """
-    primes = []
-
     sieve = get_sieve(n)
-    for i in xrange(2, n + 1):
-        if sieve[i]:
-            primes.append(i)
-
-    return primes
+    return [i for i in xrange(2, n + 1) if sieve[i]]
