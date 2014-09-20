@@ -3,7 +3,8 @@ __author__ = 'ilyakamens'
 __date__ = '9/8/14'
 
 import unittest
-from reflector import *
+
+from primes.reflector import *
 
 
 class ReflectorTestCase(unittest.TestCase):
