@@ -6,6 +6,7 @@ from sieve_of_eratosthenes_test import *
 from prime_factorization_test import *
 from reflector_test import *
 
+
 class AllTestsTestCase(unittest.TestCase):
     """Test class to run all tests"""
 
