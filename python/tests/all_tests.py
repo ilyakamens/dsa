@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from tests.linked_list_test import LinkedListTestCase
+
 __author__ = 'ilyakamens'
 __date__ = '9/8/14'
 
@@ -16,6 +18,7 @@ class AllTestsTestCase(unittest.TestCase):
         suite.addTests(unittest.TestLoader().loadTestsFromTestCase(SieveOfEratosthenesTestCase))
         suite.addTests(unittest.TestLoader().loadTestsFromTestCase(PrimeFactorizationTestCase))
         suite.addTests(unittest.TestLoader().loadTestsFromTestCase(ReflectorTestCase))
+        suite.addTests(unittest.TestLoader().loadTestsFromTestCase(LinkedListTestCase))
 
 if __name__ == '__main__':
     unittest.main()

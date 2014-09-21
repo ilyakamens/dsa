@@ -28,7 +28,8 @@ class LinkedList(ABCLinkedList):
         return node
 
     def delete(self, value):
-        """Remove the value from the list.
+        """Remove the value from the list. In the case of multiple nodes
+        with the same value, this will delete the first one in the list.
         :param value:   The value to be remove.
         :return:        The deleted node, or None if the value wasn't found.
         """
@@ -50,6 +51,10 @@ class LinkedList(ABCLinkedList):
         :return:        The deleted node, or None if the node didn't exist.
         """
         if not node:
+            return None
+        if prev and prev.next is not node:
+            return None
+        if not prev and node is not self.head:
             return None
 
         if self.head is self.tail:
